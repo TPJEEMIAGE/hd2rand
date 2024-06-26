@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HD2 Random Build</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main>
+        <h1>HD2 Random Build Generator</h1>
+		<h5>(click on the stratagems icons to exclude/include them in the selection)</h5>
+		<div id="stratList">
+			
+		</div>
+		<div id="buttonDiv">
+			<div>
+				<input type="checkbox" id="forceSupport"/> <label>Force one support weapon</label>
+				<input type="checkbox" id="noDuplicate"/> <label>One support weapon max</label>
+				<input type="checkbox" id="noDuplicateBackpack"/> <label>One backpack max (includes backpack weapons)</label>
+			</div>
+			<button id="generateButton">Generate random build</button>
+		</div>
+		<h5 id="errDisplay" style="display:none"></h5>
+		<div id="resultDiv">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+    </main>
+	<script src="index.js"></script>
+  </body>
+</html>
