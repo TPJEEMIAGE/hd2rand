@@ -4,32 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HD2 Random Build</title>
+    <title>HD2 Random Build Generator</title>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <main>
-        <h1>HD2 Random Build Generator</h1>
-		<h5>(click on the stratagems icons to exclude/include them in the selection)</h5>
-		<div id="stratList">
+	<h1>HD2 Random Build Generator</h1>
+    <div id="container">
+	<main>
+		<div class="classicFlex">
+			<button onclick="changeTab(this)" name="stratagemTab" class="activeTab">Stratagems</button>
+			<button onclick="changeTab(this)" name="primaryTab" class="inactiveTab">Primary</button>
+			<button onclick="changeTab(this)" name="otherTab" class="inactiveTab">Other</button>
+		</div>
+		<div id="stratagemTab">
+			<h5>(click on the stratagems icons to exclude/include them in the selection)</h5>
+			<div id="stratList">
+				
+			</div>
+		</div>
+		<div id="primaryTab" style="display:none">
 			
 		</div>
-		<div id="buttonDiv">
-			<div>
-				<input type="checkbox" id="forceSupport"/> <label>Force one support weapon</label>
-				<input type="checkbox" id="noDuplicate"/> <label>One support weapon max</label>
-				<input type="checkbox" id="noDuplicateBackpack"/> <label>One backpack max (includes backpack weapons)</label>
+		<div id="otherTab" style="display:none">
+			<div id="secondaryList">
+				<label>Secondary Weapons</label>
 			</div>
-			<button id="generateButton">Generate random build</button>
+			<div id="grenadeList">
+				<label>Grenades</label>
+			</div>
+			<div id="boosterList">
+				<label>Boosters</label>
+			</div>
 		</div>
 		<h5 id="errDisplay" style="display:none"></h5>
-		<div id="resultDiv">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
+		<div id="resultDiv" style="display:none">
+			<div id="othRes">
+				<label>Primary : <span id="primaryRes"></span></label>
+				<label>Secondary : <span id="secondaryRes"></span></label>
+				<label>Grenade : <span id="grenadeRes"></span></label>
+				<label>Booster : <span id="boosterRes"></span></label>
+				<label>Faction : <span id="factionRes"></span></label>
+			</div>
+			<div id="resStratagems">
+				<label>Stratagems : <span id="stratChoice"></span></label>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
 		</div>
     </main>
+	<section>
+		<div id="options">
+			<div>
+				<label>Warbonds Options</label>
+				<div><input type="checkbox" checked="true" name="mobilise" onchange="toggleWarbond(this)"/> <label>Include "Helldivers Mobilize"</label></div>
+				<div><input type="checkbox" checked="true" name="steeled" onchange="toggleWarbond(this)"/> <label>Include "Steeled Veterans"</label></div>
+				<div><input type="checkbox" checked="true" name="cutting" onchange="toggleWarbond(this)"/> <label>Include "Cutting Edge"</label></div>
+				<div><input type="checkbox" checked="true" name="democratic" onchange="toggleWarbond(this)"/> <label>Include "Democratic Detonation"</label></div>
+				<div><input type="checkbox" checked="true" name="polar" onchange="toggleWarbond(this)"/> <label>Include "Polar Patriots"</label></div>
+				<div><input type="checkbox" checked="true" name="viper" onchange="toggleWarbond(this)"/> <label>Include "Viper Commandos"</label></div>
+			</div>
+			<div>
+				<label>Stratagems Options</label>
+				<div><input type="checkbox" id="forceSupport"/> <label>Force one support weapon</label></div>
+				<div><input type="checkbox" id="noDuplicate"/> <label>One support weapon max</label></div>
+				<div><input type="checkbox" id="noDuplicateBackpack"/> <label>One backpack max</label></div>
+				<div><input type="checkbox" disabled id="forceDemoltion"/> <label>Force one demolition option (WIP)</label></div>
+			</div>
+			<div>
+				<label>Randomization Options</label>
+				<div><input type="checkbox" onchange="toggleRandomised(this)" name="stratagems" checked="true"/> <label>Randomize Stratagems</label></div>
+				<div><input type="checkbox" onchange="toggleRandomised(this)" name="primary"/> <label>Randomize Primary</label></div>
+				<div><input type="checkbox" onchange="toggleRandomised(this)" name="secondary"/> <label>Randomize Secondary</label></div>
+				<div><input type="checkbox" onchange="toggleRandomised(this)" name="grenade"/> <label>Randomize Grenade</label></div>
+				<div><input type="checkbox" onchange="toggleRandomised(this)" name="booster"/> <label>Randomize Booster</label></div>
+				<div><input type="checkbox" onchange="toggleRandomised(this)" name="faction"/> <label>Randomize Enemy Faction</label></div>
+			</div>
+		</div>
+		<div id="buttonDiv">
+			<button id="generateButton">Generate random build</button>
+		</div>
+	</section>
+	</div>
 	<script src="index.js"></script>
   </body>
 </html>

@@ -316,15 +316,405 @@ const dataset = JSON.parse(`
     }
 ]
 `);
+const equipment = JSON.parse(`
+[
+	{
+		"name": "Localization Confusion",
+		"category": "Booster",
+		"active": true,
+		"warbond": "cutting",
+		"id": 1
+	},
+	{
+		"name": "Stun",
+		"category": "Grenade",
+		"active": true,
+		"warbond": "cutting",
+		"id": 2
+	},
+	{
+		"name": "Blitzer",
+		"category": "Primary",
+		"active": true,
+		"warbond": "cutting",
+		"id": 3
+	},
+	{
+		"name": "Sickle",
+		"category": "Primary",
+		"active": true,
+		"warbond": "cutting",
+		"id": 4
+	},
+	{
+		"name": "Breaker Plasma",
+		"category": "Primary",
+		"active": true,
+		"warbond": "cutting",
+		"id": 5
+	},
+	{
+		"name": "Dagger",
+		"category": "Secondary",
+		"active": true,
+		"warbond": "cutting",
+		"id": 6
+	},
+	{
+		"name": "Expert Extraction Pilot",
+		"category": "Booster",
+		"active": true,
+		"warbond": "democratic",
+		"id": 7
+	},
+	{
+		"name": "Thermite",
+		"category": "Grenade",
+		"active": true,
+		"warbond": "democratic",
+		"id": 8
+	},
+	{
+		"name": "Adjudicator",
+		"category": "Primary",
+		"active": true,
+		"warbond": "democratic",
+		"id": 9
+	},
+	{
+		"name": "Exploding Crossbow",
+		"category": "Primary",
+		"active": true,
+		"warbond": "democratic",
+		"id": 10
+	},
+	{
+		"name": "Eruptor",
+		"category": "Primary",
+		"active": true,
+		"warbond": "democratic",
+		"id": 11
+	},
+	{
+		"name": "Grenade Pistol",
+		"category": "Secondary",
+		"active": true,
+		"warbond": "democratic",
+		"id": 12
+	},
+	{
+		"name": "Hellpod Space Optimization",
+		"category": "Booster",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 13
+	},
+	{
+		"name": "Increased Reinforcement Budget",
+		"category": "Booster",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 14
+	},
+	{
+		"name": "Muscle Enhancement",
+		"category": "Booster",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 15
+	},
+	{
+		"name": "Stamina Enhancement",
+		"category": "Booster",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 16
+	},
+	{
+		"name": "UAV Recon Booster",
+		"category": "Booster",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 17
+	},
+	{
+		"name": "Vitality Enhancement",
+		"category": "Booster",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 18
+	},
+	{
+		"name": "Heavy Explosive",
+		"category": "Grenade",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 19
+	},
+	{
+		"name": "Impact",
+		"category": "Grenade",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 20
+	},
+	{
+		"name": "Smoke",
+		"category": "Grenade",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 21
+	},
+	{
+		"name": "Fragmentation",
+		"category": "Grenade",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 22
+	},
+	{
+		"name": "Liberator",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 23
+	},
+	{
+		"name": "Liberator Penetrator",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 24
+	},
+	{
+		"name": "Scythe",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 25
+	},
+	{
+		"name": "Knight",
+		"category": "Primary",
+		"active": false,
+		"warbond": "mobilise",
+		"id": 26
+	},
+	{
+		"name": "Scorcher",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 27
+	},
+	{
+		"name": "Diligence",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 28
+	},
+	{
+		"name": "Diligence Counter Sniper",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 29
+	},
+	{
+		"name": "Breaker",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 30
+	},
+	{
+		"name": "Breaker Spray & Pray",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 31
+	},
+	{
+		"name": "Punisher",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 32
+	},
+	{
+		"name": "Slugger",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 33
+	},
+	{
+		"name": "Defender",
+		"category": "Primary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 34
+	},
+	{
+		"name": "Redeemer",
+		"category": "Secondary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 35
+	},
+	{
+		"name": "Peacemaker",
+		"category": "Secondary",
+		"active": true,
+		"warbond": "mobilise",
+		"id": 36
+	},
+	{
+		"name": "Motivational Shocks",
+		"category": "Booster",
+		"active": true,
+		"warbond": "polar",
+		"id": 37
+	},
+	{
+		"name": "Incendiary Impact",
+		"category": "Grenade",
+		"active": true,
+		"warbond": "polar",
+		"id": 38
+	},
+	{
+		"name": "Tenderizer",
+		"category": "Primary",
+		"active": true,
+		"warbond": "polar",
+		"id": 39
+	},
+	{
+		"name": "Purifier",
+		"category": "Primary",
+		"active": true,
+		"warbond": "polar",
+		"id": 40
+	},
+	{
+		"name": "Pummeler",
+		"category": "Primary",
+		"active": true,
+		"warbond": "polar",
+		"id": 41
+	},
+	{
+		"name": "Verdict",
+		"category": "Secondary",
+		"active": true,
+		"warbond": "polar",
+		"id": 42
+	},
+	{
+		"name": "Flexible Reinforcement Budget",
+		"category": "Booster",
+		"active": true,
+		"warbond": "steeled",
+		"id": 43
+	},
+	{
+		"name": "Incendiary",
+		"category": "Grenade",
+		"active": true,
+		"warbond": "steeled",
+		"id": 44
+	},
+	{
+		"name": "Liberator Concassor",
+		"category": "Primary",
+		"active": true,
+		"warbond": "steeled",
+		"id": 45
+	},
+	{
+		"name": "Dominator",
+		"category": "Primary",
+		"active": true,
+		"warbond": "steeled",
+		"id": 46
+	},
+	{
+		"name": "Breaker Incendiary",
+		"category": "Primary",
+		"active": true,
+		"warbond": "steeled",
+		"id": 47
+	},
+	{
+		"name": "Senator",
+		"category": "Secondary",
+		"active": true,
+		"warbond": "steeled",
+		"id": 48
+	},
+	{
+		"name": "Experimental Infusion",
+		"category": "Booster",
+		"active": true,
+		"warbond": "viper",
+		"id": 49
+	},
+	{
+		"name": "Throwing Knife",
+		"category": "Grenade",
+		"active": true,
+		"warbond": "viper",
+		"id": 50
+	},
+	{
+		"name": "Liberator Carbine",
+		"category": "Primary",
+		"active": true,
+		"warbond": "viper",
+		"id": 51
+	},
+	{
+		"name": "Bushwhacker",
+		"category": "Secondary",
+		"active": true,
+		"warbond": "viper",
+		"id": 52
+	}
+]
+`);
+const activeWarbonds = ["mobilise","steeled","cutting","democratic","polar","viper"];
 const stratList = document.getElementById("stratList");
+const secondaryList = document.getElementById("secondaryList");
+const grenadeList = document.getElementById("grenadeList");
+const boosterList = document.getElementById("boosterList");
+const primaryTab = document.getElementById("primaryTab");
+const primaryRes = document.getElementById("primaryRes");
+const secondaryRes = document.getElementById("secondaryRes");
+const grenadeRes = document.getElementById("grenadeRes");
+const boosterRes = document.getElementById("boosterRes");
+const factionRes = document.getElementById("factionRes");
+const resStratagems = document.getElementById("resStratagems");
 const generateButton = document.getElementById("generateButton");
 const resultDiv = document.getElementById("resultDiv");
 const forceSupport = document.getElementById("forceSupport");
+const forceDemolition = document.getElementById("forceDemolition");
 const noDuplicateSupport = document.getElementById("noDuplicate");
 const noDuplicateBackpack = document.getElementById("noDuplicateBackpack");
+const randomizedElements = ["stratagems"]
 const errDisplay = document.getElementById("errDisplay");
 const backpackIDs = [1,2,3,4,5,6,11,13,16,21];
 const supportWeaponsIDs = [7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
+
+//Degueulasse v2, mais flemme
+const defFalse = ["primary","secondary","grenade","booster","faction"];
+const defTrue = ["stratagems","mobilise","steeled","cutting","democratic","polar","viper"];
+defFalse.forEach(x => document.getElementsByName(x)[0].checked = false);
+defTrue.forEach(x => document.getElementsByName(x)[0].checked = true);
+//Fin dégueulasse
+
+equipment.sort((o1,o2) => o1.name.localeCompare(o2.name));
 
 dataset.forEach( o => {
 	o.active = true;
@@ -340,100 +730,171 @@ dataset.forEach( o => {
 	stratList.appendChild(curImg);
 });
 
+equipment.forEach(function(x){
+	let newDiv = document.createElement("DIV");
+	let checkbox = document.createElement("INPUT");
+	let label = document.createElement("LABEL");
+	let parent = null;
+	if(x.category == "Primary"){
+		parent = primaryTab;
+	}
+	if(x.category == "Secondary"){
+		parent = secondaryList;
+	}
+	if(x.category == "Grenade"){
+		parent = grenadeList;
+	}
+	if(x.category == "Booster"){
+		parent = boosterList;
+	}
+	label.innerHTML = x.name;
+	checkbox.type = "checkbox";
+	checkbox.checked = x.active;
+	checkbox.addEventListener("change",function(){
+		x.active = !x.active;
+	})
+	
+	newDiv.appendChild(checkbox);
+	newDiv.appendChild(label);
+	parent.appendChild(newDiv);
+});
+
 generateButton.addEventListener("click",function(){
 	errDisplay.style = "display:none";
-	let randomIDs = [];
-	let randomPossibleIDs = [];
-	let totalRandomChoice = 4;
-	dataset.forEach( o => {
-		if(o.active){
-			randomPossibleIDs.push(o.id);
-		}
-	});
-	if(randomPossibleIDs.length < 4){
-		console.error("You must enable at least 4 stratagems");
-		errDisplay.innerHTML = "You must enable at least 4 stratagems";
-		errDisplay.style = "color:red";
-		return;
-	}
-	if(forceSupport.checked){
-		const intersect = randomPossibleIDs.filter(value => supportWeaponsIDs.includes(value));
-		if(intersect.length == 0){
-			console.error("You must enable one support weapon if you use the force option");
+	let selectedPrimary = "Your choice";
+	let selectedSecondary = "Your choice";
+	let selectedGrenade = "Your choice";
+	let selectedBooster = "Your choice";
+	let selectedFaction = "Your choice";
+	resultDiv.style = "";
+	Array.from(resStratagems.getElementsByTagName("DIV")).forEach( divNode => {divNode.innerHTML = "";divNode.style="display:none"});
+	document.getElementById("stratChoice").innerHTML = "";
+	if(randomizedElements.includes("stratagems")){
+		let randomIDs = [];
+		let randomPossibleIDs = [];
+		let totalRandomChoice = 4;
+		dataset.forEach( o => {
+			if(o.active){
+				randomPossibleIDs.push(o.id);
+			}
+		});
+		if(randomPossibleIDs.length < 4){
+			console.error("You must enable at least 4 stratagems");
+			errDisplay.innerHTML = "You must enable at least 4 stratagems";
 			errDisplay.style = "color:red";
-			errDisplay.innerHTML = "You must enable one support weapon if you use the force option";
 			return;
 		}
-		totalRandomChoice--;
-		found = false;
-		//Degueulasse, a changer plus tard
-		while(!found){
-			let randId = getRandomArbitrary(7,21);
-			if(randomPossibleIDs.includes(randId)){
-				randomIDs.push(randId);
-				randomPossibleIDs.splice(randomPossibleIDs.indexOf(randId),1);
-				found = true;
-				if(noDuplicateBackpack.checked && backpackIDs.includes(randId)){
-					backpackIDs.forEach( x => {
-						if(randomPossibleIDs.includes(x)){
-							randomPossibleIDs.splice(randomPossibleIDs.indexOf(x),1);
-						}
-					})
-				}
+		if(forceSupport.checked){
+			const intersect = randomPossibleIDs.filter(value => supportWeaponsIDs.includes(value));
+			if(intersect.length == 0){
+				console.error("You must enable one support weapon if you use the force option");
+				errDisplay.style = "color:red";
+				errDisplay.innerHTML = "You must enable one support weapon if you use the force option";
+				return;
 			}
-		}
-		if(noDuplicateSupport.checked){
-			for(let i = 7;i<=22;i++){
-				if(randomPossibleIDs.includes(i)){
-					randomPossibleIDs.splice(randomPossibleIDs.indexOf(i),1);
-				}
-			}
-		}
-	}
-	
-	for(let i = 0;i<totalRandomChoice;i++){
-		let found = false;
-		while(!found){
-			let randId = getRandomArbitrary(0,randomPossibleIDs.length);
-			let stratId = randomPossibleIDs[randId];
-			if(!randomIDs.includes(stratId)){
-				found = true;
-				randomIDs.push(stratId),
-				randomPossibleIDs.splice(randId,1);
-				if(noDuplicateSupport.checked && stratId >=7 && stratId <=22 ){
-					for(let i = 7;i<=22;i++){
-						if(randomPossibleIDs.includes(i)){
-							randomPossibleIDs.splice(randomPossibleIDs.indexOf(i),1);
-						}
+			totalRandomChoice--;
+			found = false;
+			//Degueulasse, a changer plus tard
+			while(!found){
+				let randId = getRandomArbitrary(7,21);
+				if(randomPossibleIDs.includes(randId)){
+					randomIDs.push(randId);
+					randomPossibleIDs.splice(randomPossibleIDs.indexOf(randId),1);
+					found = true;
+					if(noDuplicateBackpack.checked && backpackIDs.includes(randId)){
+						backpackIDs.forEach( x => {
+							if(randomPossibleIDs.includes(x)){
+								randomPossibleIDs.splice(randomPossibleIDs.indexOf(x),1);
+							}
+						})
 					}
 				}
-				if(noDuplicateBackpack.checked && backpackIDs.includes(stratId)){
-					backpackIDs.forEach( x => {
-						if(randomPossibleIDs.includes(x)){
-							randomPossibleIDs.splice(randomPossibleIDs.indexOf(x),1);
-						}
-					})
+			}
+			if(noDuplicateSupport.checked){
+				for(let i = 7;i<=22;i++){
+					if(randomPossibleIDs.includes(i)){
+						randomPossibleIDs.splice(randomPossibleIDs.indexOf(i),1);
+					}
 				}
 			}
 		}
-	}
-	let i = 0;
-	Array.from(resultDiv.children).forEach( divNode => {
-		divNode.innerHTML = "";
-		let curImg = document.createElement("IMG");
-		let stratagem = null;
-		let j = 0;
-		while(!stratagem){
-			if(dataset[j].id == randomIDs[i]){
-				stratagem = dataset[j];
+		
+		for(let i = 0;i<totalRandomChoice;i++){
+			let found = false;
+			while(!found){
+				let randId = getRandomArbitrary(0,randomPossibleIDs.length);
+				let stratId = randomPossibleIDs[randId];
+				if(!randomIDs.includes(stratId)){
+					found = true;
+					randomIDs.push(stratId),
+					randomPossibleIDs.splice(randId,1);
+					if(noDuplicateSupport.checked && stratId >=7 && stratId <=22 ){
+						for(let i = 7;i<=22;i++){
+							if(randomPossibleIDs.includes(i)){
+								randomPossibleIDs.splice(randomPossibleIDs.indexOf(i),1);
+							}
+						}
+					}
+					if(noDuplicateBackpack.checked && backpackIDs.includes(stratId)){
+						backpackIDs.forEach( x => {
+							if(randomPossibleIDs.includes(x)){
+								randomPossibleIDs.splice(randomPossibleIDs.indexOf(x),1);
+							}
+						})
+					}
+				}
 			}
-			j++;
 		}
-		curImg.setAttribute("data-sid",stratagem.id);
-		curImg.setAttribute("src",stratagem.icon);
-		divNode.appendChild(curImg);
-		i++;
-	})
+		let i = 0;
+		
+		Array.from(resStratagems.getElementsByTagName("DIV")).forEach( divNode => {
+			divNode.innerHTML = "";
+			divNode.style=""
+			let curImg = document.createElement("IMG");
+			let stratagem = null;
+			let j = 0;
+			while(!stratagem){
+				if(dataset[j].id == randomIDs[i]){
+					stratagem = dataset[j];
+				}
+				j++;
+			}
+			curImg.setAttribute("data-sid",stratagem.id);
+			curImg.setAttribute("src",stratagem.icon);
+			divNode.appendChild(curImg);
+			i++;
+		})
+	}
+	else{
+		document.getElementById("stratChoice").innerHTML = " Your choice";
+	}
+	if(randomizedElements.includes("primary")){
+		let primaryRandomList = equipment.filter(x => activeWarbonds.includes(x.warbond) && x.active && x.category == "Primary");
+		selectedPrimary = primaryRandomList[getRandomArbitrary(0,primaryRandomList.length)].name;
+	}
+	if(randomizedElements.includes("secondary")){
+		let secondaryRandomList = equipment.filter(x => activeWarbonds.includes(x.warbond) && x.active && x.category == "Secondary");
+		selectedSecondary = secondaryRandomList[getRandomArbitrary(0,secondaryRandomList.length)].name;
+	}
+	if(randomizedElements.includes("grenade")){
+		let randomList = equipment.filter(x => activeWarbonds.includes(x.warbond) && x.active && x.category == "Grenade");
+		selectedGrenade = randomList[getRandomArbitrary(0,randomList.length)].name;
+	}
+	if(randomizedElements.includes("booster")){
+		let randomList = equipment.filter(x => activeWarbonds.includes(x.warbond) && x.active && x.category == "Booster");
+		selectedBooster = randomList[getRandomArbitrary(0,randomList.length)].name;
+	}
+	if(randomizedElements.includes("faction")){
+		selectedFaction = "Terminids";
+		if(getRandomArbitrary(0,2) >= 1){
+			selectedFaction = "Automatons";
+		}
+	}
+	primaryRes.innerHTML = selectedPrimary;
+	secondaryRes.innerHTML = selectedSecondary;
+	grenadeRes.innerHTML = selectedGrenade;
+	boosterRes.innerHTML = selectedBooster;
+	factionRes.innerHTML = selectedFaction;
 	
 	
 });
@@ -441,6 +902,34 @@ generateButton.addEventListener("click",function(){
 
 function getRandomArbitrary(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
+}
+
+function changeTab(e){
+	let previousTab = document.getElementsByClassName("activeTab")[0];
+	previousTab.classList.toggle("activeTab");
+	previousTab.classList.toggle("inactiveTab");
+	document.getElementById(previousTab.name).style = "display:none";
+	e.classList.toggle("activeTab");
+	e.classList.toggle("inactiveTab");
+	document.getElementById(e.name).style = "";
+}
+
+function toggleWarbond(elem){
+	if(activeWarbonds.includes(elem.name)){
+		activeWarbonds.splice(activeWarbonds.indexOf(elem.name),1);
+	}
+	else{
+		activeWarbonds.push(elem.name);
+	}
+}
+
+function toggleRandomised(elem){
+	if(randomizedElements.includes(elem.name)){
+		randomizedElements.splice(randomizedElements.indexOf(elem.name),1);
+	}
+	else{
+		randomizedElements.push(elem.name);
+	}
 }
 
 

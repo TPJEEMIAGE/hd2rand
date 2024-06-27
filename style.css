@@ -2,6 +2,27 @@
 	color : #f9f777;
 	background-color:black;
 }
+#container{
+	display:flex;
+	justify-content: space-around;
+}
+main{
+	width:75%;
+}
+section{
+	min-width:300px;
+	width:300px;
+}
+#primaryTab{
+	display:flex;
+	flex-wrap:wrap;
+	margin:10px;
+	justify-content: space-between;
+}
+#primaryTab > div{
+	width:25%;
+	margin-top: 10px;
+}
 button{
 	display: inline-block;
 	padding:5px;
@@ -18,6 +39,20 @@ img{
 .active{
 	opacity: 1;
 	transition: opacity 0.25s;
+}
+#otherTab{
+	display:flex;
+	margin-top: 10px;
+	width:100%;
+	justify-content: space-around;
+}
+#otherTab > div{
+	border: 3px solid #f9f777;
+	display:flex;
+	flex-direction:column;
+	padding:10px;
+	margin:10px;
+	width:33%;
 }
 #buttonDiv{
 	display:flex;
@@ -44,9 +79,23 @@ img{
 	display:flex;
 	margin-top: 10px;
 	width:100%;
-	justify-content: center;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	border: 5px solid #f9f777;
+	padding:10px;
+	margin:5px;
+	box-sizing: border-box;
 }
-#resultDiv > div{
+#othRes{
+	display: flex;
+	flex-direction: column;
+}
+#resStratagems{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#resStratagems > div{
 	border: 3px solid #f9f777;
 	width : 75px;
 	height: 75px;
@@ -65,4 +114,38 @@ h5{
   flex-wrap: wrap;
   justify-items: center;
   justify-content: center;
+}
+.classicFlex{
+	width:100%;
+	display: flex;
+	justify-items: center;
+	justify-content: space-evenly;
+}
+.activeTab{
+	background-color: #2475bb;
+	transition: background-color 0.25s
+}
+.inactiveTab{
+	background-color: black;
+	transition: background-color 0.25s
+}
+#options{
+	margin-top:10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-items: center;
+	justify-content: space-evenly;
+}
+
+#options > div{
+	border: 3px solid #f9f777;
+	padding: 10px;
+	margin: 5px 0;
+	width:100%;
+	display : flex;
+	flex-direction:column;
+}
+label{
+	margin:5px;
+	text-align:center;
 }
