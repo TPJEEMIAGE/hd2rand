@@ -63,7 +63,8 @@ img{
 	flex-wrap:wrap;
 }
 #buttonDiv > *{
-	margin : 15px;
+	margin : 0px;
+	width:100%;
 }
 
 #buttonDiv > div{
@@ -171,9 +172,11 @@ label{
 	}
 	.classicFlex{
 		flex-wrap:wrap;
+		position: sticky;
+		top : 0;
 	}
 	.classicFlex > *{
-		width:100%;
+		width: 30%;
 		margin: 5px 0;
 	}
 	main{
@@ -197,6 +200,14 @@ label{
 	}
 	#resStratagems{
 		flex-wrap:wrap;
+	}
+	#buttonDiv{
+		width:100%;
+		position:sticky;
+		bottom:0;
+	}#generateButton{
+		width:100%;
+		margin:5px;
 	}
 	
 }

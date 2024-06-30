@@ -913,6 +913,8 @@ function changeTab(e){
 	e.classList.toggle("activeTab");
 	e.classList.toggle("inactiveTab");
 	document.getElementById(e.name).style = "";
+	document.getElementById(e.name).scrollIntoView();
+	window.scrollBy(0,-50);
 }
 
 function toggleWarbond(elem){
