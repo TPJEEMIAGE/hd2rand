@@ -10,51 +10,35 @@
   <body>
 	<h1>HD2 Random Build Generator</h1>
     <div id="container">
-	<main>
-		<div class="classicFlex">
-			<button onclick="changeTab(this)" name="stratagemTab" class="activeTab">Stratagems</button>
-			<button onclick="changeTab(this)" name="primaryTab" class="inactiveTab">Primary</button>
-			<button onclick="changeTab(this)" name="otherTab" class="inactiveTab">Other</button>
-		</div>
-		<div id="stratagemTab">
-			<h5>(click on the stratagems icons to exclude/include them in the selection)</h5>
-			<div id="stratList">
+		<main>
+			<div class="classicFlex">
+				<button onclick="changeTab(this)" name="stratagemTab" class="activeTab">Stratagems</button>
+				<button onclick="changeTab(this)" name="primaryTab" class="inactiveTab">Primary</button>
+				<button onclick="changeTab(this)" name="otherTab" class="inactiveTab">Other</button>
+			</div>
+			<div id="stratagemTab">
+				<h5>(click on the stratagems icons to exclude/include them in the selection)</h5>
+				<div id="stratList">
+					
+				</div>
+			</div>
+			<div id="primaryTab" style="display:none">
 				
 			</div>
-		</div>
-		<div id="primaryTab" style="display:none">
-			
-		</div>
-		<div id="otherTab" style="display:none">
-			<div id="secondaryList">
-				<label>Secondary Weapons</label>
+			<div id="otherTab" style="display:none">
+				<div id="secondaryList">
+					<label>Secondary Weapons</label>
+				</div>
+				<div id="grenadeList">
+					<label>Grenades</label>
+				</div>
+				<div id="boosterList">
+					<label>Boosters</label>
+				</div>
 			</div>
-			<div id="grenadeList">
-				<label>Grenades</label>
-			</div>
-			<div id="boosterList">
-				<label>Boosters</label>
-			</div>
-		</div>
-		<h5 id="errDisplay" style="display:none"></h5>
-		<div id="resultDiv" style="display:none">
-			<div id="othRes">
-				<label>Primary : <span id="primaryRes"></span></label>
-				<label>Secondary : <span id="secondaryRes"></span></label>
-				<label>Grenade : <span id="grenadeRes"></span></label>
-				<label>Booster : <span id="boosterRes"></span></label>
-				<label>Faction : <span id="factionRes"></span></label>
-			</div>
-			<div id="resStratagems">
-				<label>Stratagems : <span id="stratChoice"></span></label>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-		</div>
-    </main>
-	<section>
+			<h5 id="errDisplay" style="display:none"></h5>
+		</main>
+		<section>
 		<div id="options">
 			<div>
 				<label>Warbonds Options</label>
@@ -86,6 +70,27 @@
 			<button id="generateButton">Generate random build</button>
 		</div>
 	</section>
+	
+	</div>
+	<div id="resultDiv" style="display:none">
+			<div id="othRes">
+				<label>Primary : <span id="primaryRes"></span></label>
+				<label>Secondary : <span id="secondaryRes"></span></label>
+				<label>Grenade : <span id="grenadeRes"></span></label>
+				<label>Booster : <span id="boosterRes"></span></label>
+				<label>Faction : <span id="factionRes"></span></label>
+			</div>
+			<div id="resStratagems">
+				<label>Stratagems : <span id="stratChoice"></span></label>
+				<div id="stratImgs">
+					<div></div>
+					<div></div>
+					<p class="break"></p>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="index.js"></script>
   </body>

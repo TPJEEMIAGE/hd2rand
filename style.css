@@ -83,19 +83,28 @@ img{
 	justify-content: space-around;
 	border: 5px solid #f9f777;
 	padding:10px;
-	margin:5px;
 	box-sizing: border-box;
 }
 #othRes{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 #resStratagems{
 	display: flex;
+	flex-wrap:wrap;
 	justify-content: center;
 	align-items: center;
 }
-#resStratagems > div{
+#resStratagems > *{
+	width:100%;
+}
+#stratImgs{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+#stratImgs > div{
 	border: 3px solid #f9f777;
 	width : 75px;
 	height: 75px;
@@ -148,4 +157,55 @@ h5{
 label{
 	margin:5px;
 	text-align:center;
+}
+#resultDiv > *{
+	width:50%;
+}
+.break{
+	display:none;
+}
+
+@media(max-width: 1000px){
+	#container{
+		flex-wrap:wrap;
+	}
+	.classicFlex{
+		flex-wrap:wrap;
+	}
+	.classicFlex > *{
+		width:100%;
+		margin: 5px 0;
+	}
+	main{
+		width:100%;
+	}
+	section{
+		width:100%;
+	}
+	#options > *{
+		width:100%
+	}
+	#otherTab{
+		flex-wrap:wrap;
+	}
+	#otherTab > div{
+		width:100%;
+	}
+	#primaryTab > div {
+	  width: 50%;
+	  margin: 10px 0;
+	}
+	#resStratagems{
+		flex-wrap:wrap;
+	}
+	
+}
+@media(max-width: 780px){
+	.break{
+		display:block;
+		width:100%;
+		height:0;
+		margin:0;
+		padding:0;
+	}
 }

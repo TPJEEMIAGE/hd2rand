@@ -696,6 +696,7 @@ const grenadeRes = document.getElementById("grenadeRes");
 const boosterRes = document.getElementById("boosterRes");
 const factionRes = document.getElementById("factionRes");
 const resStratagems = document.getElementById("resStratagems");
+const stratImgs = document.getElementById("stratImgs");
 const generateButton = document.getElementById("generateButton");
 const resultDiv = document.getElementById("resultDiv");
 const forceSupport = document.getElementById("forceSupport");
@@ -767,7 +768,7 @@ generateButton.addEventListener("click",function(){
 	let selectedBooster = "Your choice";
 	let selectedFaction = "Your choice";
 	resultDiv.style = "";
-	Array.from(resStratagems.getElementsByTagName("DIV")).forEach( divNode => {divNode.innerHTML = "";divNode.style="display:none"});
+	Array.from(stratImgs.getElementsByTagName("DIV")).forEach( divNode => {divNode.innerHTML = "";divNode.style="display:none"});
 	document.getElementById("stratChoice").innerHTML = "";
 	if(randomizedElements.includes("stratagems")){
 		let randomIDs = [];
@@ -847,7 +848,7 @@ generateButton.addEventListener("click",function(){
 		}
 		let i = 0;
 		
-		Array.from(resStratagems.getElementsByTagName("DIV")).forEach( divNode => {
+		Array.from(stratImgs.getElementsByTagName("DIV")).forEach( divNode => {
 			divNode.innerHTML = "";
 			divNode.style=""
 			let curImg = document.createElement("IMG");
@@ -895,7 +896,7 @@ generateButton.addEventListener("click",function(){
 	grenadeRes.innerHTML = selectedGrenade;
 	boosterRes.innerHTML = selectedBooster;
 	factionRes.innerHTML = selectedFaction;
-	
+	resultDiv.scrollIntoView();
 	
 });
 
